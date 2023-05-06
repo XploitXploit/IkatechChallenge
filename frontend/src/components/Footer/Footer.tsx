@@ -6,7 +6,7 @@ import styles from "./Footer.module.css";
 
 const Footer: React.FC = () => {
 	return (
-		<footer>
+		<footer className='mx-auto text-center'>
 			<div className='d-flex align-items-center m-0'>
 				<Container
 					fluid
