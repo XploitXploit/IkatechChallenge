@@ -1,0 +1,22 @@
+.card .cardImg {
+	width: 100%; /* Set the desired width here */
+	height: 200px; /* Set the desired height here */
+	object-fit: cover; /* This will ensure the aspect ratio is maintained */
+}
+
+.card .smallCardImg {
+	width: 40px; /* Adjust the width as desired */
+	height: auto; /* Maintain the aspect ratio */
+	margin-top: 5px; /* Add some space between the main image and the small image */
+}
+
+.card .cardContainer {
+	border: none;
+	border-bottom: 1px solid #ccc;
+	border-radius: 0;
+}
+
+.cardText {
+	text-align: center;
+	color: primary;
+}
