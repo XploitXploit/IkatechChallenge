@@ -5,6 +5,7 @@ import CardList from "../components/CardList/CardList.tsx";
 import VideoJumbotron from "../components/Jumbotron/VideoJumbotron.tsx";
 import CardListP, { CardData } from "../components/CardList/CardListP.tsx";
 import InstagramCarousel from "../components/InstagramCarrousel/InstagramCarrousel.tsx";
+import Footer from "../components/Footer/Footer.tsx";
 
 const cards: CardData[] = [
 	{
@@ -35,6 +36,7 @@ const HomePage: React.FC = () => {
 			<Container>
 				<InstagramCarousel />
 			</Container>
+			<Footer />
 		</div>
 	);
 };
