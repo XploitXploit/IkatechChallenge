@@ -1,13 +1,18 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header.tsx';
+import HomePage from './pages/HomePage.tsx';
 
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <Router>
       <Header />
-      {/* Add other components here */}
-    </div>
+      <Routes>
+        <Route path="" element={<HomePage/>} />
+        {/* Other routes go here */}
+      </Routes>
+    </Router>
   );
 };
 
