@@ -13,14 +13,14 @@ interface CardListProps {
 
 const CardListP: React.FC<CardListProps> = ({ cards }) => {
 	return (
-		<Container className='mx-auto'>
+		<Container className='mx-auto p-0' style={{ backgroundColor: 'green' }} >
 			<Row>
 				<Col xs={12} md={6} className='d-flex align-items-stretch px-0'>
-					<Card className='w-100 h-50'>
+					<Card className='w-100 h-100'>
 						<Card.Img
 							variant='top'
 							src={cards[0].image}
-							className={`w-100 h-100 ${styles.cardImage}`}
+							className={`w-100 h-100 ${styles.cardImage} m-0 p-0`}
 						/>
 						<Card.ImgOverlay>
 							<Button variant='secondary' className='w-100 mt-2 rounded-0'>
@@ -30,7 +30,7 @@ const CardListP: React.FC<CardListProps> = ({ cards }) => {
 					</Card>
 				</Col>
 				<Col xs={12} md={6} className='d-flex flex-column px-0'>
-					<Card className='w-100 h-25 py-0'>
+					<Card className='w-100 h-100 py-0'>
 						<Card.Img
 							variant='top'
 							src={cards[1].image}
@@ -42,11 +42,11 @@ const CardListP: React.FC<CardListProps> = ({ cards }) => {
 							</Button>
 						</Card.ImgOverlay>
 					</Card>
-					<Card className='w-100 h-25 py-0'>
+					<Card className='w-100 h-100 py-0'>
 						<Card.Img
 							variant='top'
 							src={cards[2].image}
-							className={`w-100 h-100 ${styles.cardImage}`}
+							className={`w-100 h-100 ${styles.cardImage} m-0 p-0`}
 						/>
 						<Card.ImgOverlay>
 							<Button variant='secondary' className='w-100 mt-2 rounded-0'>
