@@ -1,0 +1,23 @@
+.searchContainer {
+	position: relative;
+}
+
+.searchWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.searchInput {
+	width: 250px;
+}
+
+.searchIcon {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
