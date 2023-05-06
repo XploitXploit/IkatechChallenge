@@ -1,9 +1,13 @@
 .customnavbar {
-    border: 0 !important;
+	border: 0 !important;
 }
+.header-container {
+	background-color: white;
+}
+
 .navbar {
-    padding: 0 !important;
-    margin: 0;
+	padding: 0 !important;
+	margin: 0;
 }
 .nav_link_custom {
 	font-family: "Your Desired Font", sans-serif; /* Replace 'Your Desired Font' with the font name you want to use */

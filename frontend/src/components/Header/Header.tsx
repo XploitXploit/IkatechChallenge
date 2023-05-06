@@ -11,6 +11,7 @@ const Header: React.FC = () => {
 				position: "sticky",
 				top: 0,
 				zIndex: 999,
+				backgroundColor: "white",
 			}}>
 			<div className='bg-primary py-3'>
 				<Container fluid>
@@ -45,7 +46,7 @@ const Header: React.FC = () => {
 				</Container>
 			</div>
 			<Container fluid>
-				<Row className='my-3 px-5'>
+				<Row className='bg-white my-3 px-5'>
 					<Col xs={12} md={4} className='px-0'>
 						<img
 							alt=''
