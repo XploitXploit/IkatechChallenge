@@ -1,0 +1,20 @@
+@font-face {
+	font-family: "Nashville";
+	src: url("../public/fonts/Nashville.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Montserrat-Bold";
+	src: url("../public/fonts/Montserrat-Bold.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Montserrat-Regular";
+	src: url("../public/fonts/Montserrat-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
