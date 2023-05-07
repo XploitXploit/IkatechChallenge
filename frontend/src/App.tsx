@@ -12,9 +12,9 @@ const App: React.FC = () => {
     <Router>
       <Header />
       <Routes>
-        <Route path="" element={<HomePage/>} />
-        <Route path="/category" element={<CategoryPage />} />
-        <Route path="/product" element={<ProductPage/>} />
+        <Route path="/" element={<HomePage/> }/>
+        <Route path="Categoria" element={<CategoryPage />} />
+        <Route path="Product" element={<ProductPage/>} />
       </Routes>
       <Footer />
     </Router>

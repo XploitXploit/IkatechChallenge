@@ -16,7 +16,8 @@ const Header: React.FC = () => {
 			<div className='bg-primary py-3'>
 				<Container fluid>
 					<Row>
-						<Col className={`text-center text-white font-weight-bold ${styles.saleFont}`}>
+						<Col
+							className={`text-center text-white font-weight-bold ${styles.saleFont}`}>
 							HOT SALE -30% EN SANDALIAS
 						</Col>
 					</Row>
@@ -39,7 +40,11 @@ const Header: React.FC = () => {
 									style={{ paddingLeft: "15px", paddingRight: "15px" }}>
 									SERVICIO AL CLIENTE
 								</p>
-								<p className='text-dark font-weight-bold' style={{paddingRight: "50px"}}>MI CUENTA</p>
+								<p
+									className='text-dark font-weight-bold'
+									style={{ paddingRight: "50px" }}>
+									MI CUENTA
+								</p>
 							</div>
 						</Col>
 					</Row>
@@ -109,9 +114,9 @@ const Header: React.FC = () => {
 								BLOG
 							</Nav.Link>
 							<Nav.Link
-								href='#'
+								href='/Categoria'
 								className={`font-weight-bold mr-3 ${styles.nav_link_custom} ${styles.nav_link_historia}`}>
-								HISTORIA
+								CATEGORIA
 							</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
