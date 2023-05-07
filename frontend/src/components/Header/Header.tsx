@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
 import styles from "./Header.module.css";
 import CartIcon from "../../assets/icons/CartIcon.svg";
+import CustomTooltip from "../ToolTip/ToolTip.tsx";
 
 const Header: React.FC = () => {
 	return (
@@ -111,11 +112,13 @@ const Header: React.FC = () => {
 								className={`font-weight-bold mr-3 ${styles.nav_link_custom} ${styles.nav_link_blog}`}>
 								BLOG
 							</Nav.Link>
-							<Nav.Link
-								href='/Categoria'
-								className={`font-weight-bold mr-3 ${styles.nav_link_custom} ${styles.nav_link_historia}`}>
-								CATEGORIA
-							</Nav.Link>
+							<CustomTooltip message='This is the only item working'>
+								<Nav.Link
+									href='/Categoria'
+									className={`font-weight-bold mr-3 ${styles.nav_link_custom} ${styles.nav_link_historia}`}>
+									CATEGORIA
+								</Nav.Link>
+							</CustomTooltip>
 							<Nav.Link
 								href='#'
 								className={`font-weight-bold mr-3 ${styles.nav_link_custom} ${styles.nav_link_historia}`}>

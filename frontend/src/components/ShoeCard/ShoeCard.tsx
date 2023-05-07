@@ -52,13 +52,13 @@ const ShoeCard: React.FC<ShoeCardProps> = ({
 					borderRadius: 0,
 					cursor: "pointer",
 				}}
-				className={styles.cardContainer}
-				onClick={() => onClick()}>
+				className={styles.cardContainer}>
 				<Row>
 					<Card.Img
 						style={{ width: "100%", height: "200px", objectFit: "cover" }}
 						variant='top'
 						src={imagePath}
+						onClick={() => onClick()}
 					/>
 					<Card.Img
 						style={{ width: "40px", height: "auto", marginTop: "5px" }}
@@ -66,21 +66,20 @@ const ShoeCard: React.FC<ShoeCardProps> = ({
 					/>
 				</Row>
 				<Row>
-				<Card.Body >
-					<Card.Title className={styles.cardText}>{nombre}</Card.Title>
-					<Card.Text className={styles.cardPrice}
-					>{`$${precio}`}</Card.Text>
-					{showButton && (
-						<Button
-							style={{ width: "100%", borderRadius: 0 }}
-							variant='primary'
-							onClick={() => {
-								// Do something when the button is clicked
-							}}>
-							Add to cart
-						</Button>
-					)}
-				</Card.Body>
+					<Card.Body>
+						<Card.Title className={styles.cardText}>{nombre}</Card.Title>
+						<Card.Text className={styles.cardPrice}>{`$${precio}`}</Card.Text>
+						{showButton && (
+							<Button
+								style={{ width: "100%", borderRadius: 0 }}
+								variant='primary'
+								onClick={() => {
+									// Do something when the button is clicked
+								}}>
+								Add to cart
+							</Button>
+						)}
+					</Card.Body>
 				</Row>
 			</Card>
 		</Container>
