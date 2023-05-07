@@ -1,12 +1,23 @@
 .filterContainer {
-	padding: 20px;
-    margin-top: 65px;
+	padding: 30px;
+	margin-top: 65px;
 	border: 1px solid #ccc;
-	border-radius: 5px;
-	background-color: #f8f9fa;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 2px;
+	cursor: pointer;
+	margin-bottom: 30px;
+}
+
+.colorSelect {
+	cursor: pointer;
+	padding-bottom: 0.5rem;
 }
 
 .titleTag {
-    font-size: 20px;
+	font-size: 20px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 }

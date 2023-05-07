@@ -2,14 +2,16 @@ import { createSlice } from "@reduxjs/toolkit";
 
 interface FilterState {
 	color: string | null;
-	precioMax: int | null;
-	precioMin: int | null;
+	precioMax: number | null;
+	precioMin: number | null;
+	talle: number | null;
 }
 
 const initialState: FilterState = {
 	color: null,
 	precioMax: null,
 	precioMin: null,
+	talle: null,
 };
 
 const filterSlice = createSlice({
@@ -25,15 +27,27 @@ const filterSlice = createSlice({
 		},
 		clearFiltersColor: (state) => {
 			state.color = null;
-        },
-        clearFiltersPrice: (state) => {
+		},
+		clearFiltersPrice: (state) => {
 			state.precioMax = null;
 			state.precioMin = null;
+		},
+		setSizesFilter: (state, action) => {
+			state.talle = action.payload;
+		},
+		clearFilterSizes: (state) => {
+			state.talle = null;
 		},
 	},
 });
 
-export const { setColorFilter, setPriceFilter, clearFiltersColor,clearFiltersPrice } =
-	filterSlice.actions;
+export const {
+	setColorFilter,
+	setPriceFilter,
+	clearFiltersColor,
+	clearFiltersPrice,
+	setSizesFilter,
+	clearFilterSizes,
+} = filterSlice.actions;
 
 export default filterSlice.reducer;
