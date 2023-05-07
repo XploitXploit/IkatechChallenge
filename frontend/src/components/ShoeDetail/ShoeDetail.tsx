@@ -62,19 +62,20 @@ const ShoeDetail: React.FC<ShoeDetailProps> = ({ shoe }) => {
 	};
 
 	const handleImageChange = (selectedIndex: number) => {
+		console.log('Selected Index:', selectedIndex);
 		setSelectedImageIndex(selectedIndex);
 	};
 
 	return (
-		<Container className={`{mt-1 ${styles.fontCustom}`}>
+		<Container className={`mt-1 ${styles.fontCustom}`}>
 			<Row className='mb-3 py-3'>
 				<BreadcrumbComponent />
 			</Row>
 			<Row>
 				<Col md={8}>
-					<Carousel onSelect={handleImageChange}>
-						{imagePaths.map((path) => (
-							<Carousel.Item key={path}>
+					<Carousel variant="dark" onSelect={handleImageChange} activeIndex={selectedImageIndex}>
+						{imagePaths.map((path, index) => (
+							<Carousel.Item key={`${path}-${index}`}>
 								<Image src={path} alt={shoe.nombre} fluid />
 							</Carousel.Item>
 						))}
@@ -86,7 +87,8 @@ const ShoeDetail: React.FC<ShoeDetailProps> = ({ shoe }) => {
 								<Image
 									src={path}
 									alt={`Preview ${index + 1}`}
-									className={selectedImageIndex === index ? styles.selectedThumbnail : ''}
+									style={selectedImageIndex === index ? { border: '2px solid #7a4a58' } : {}}
+									onClick={() => handleImageChange(index)}
 									fluid
 									thumbnail
 								/>
