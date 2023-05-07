@@ -66,10 +66,10 @@ const VideoJumbotron: React.FC = () => {
 					transform: "translate(-50%, -50%)",
 					zIndex: 1,
 				}}>
-				<Row className='justify-content-center'>
+				<Row className='justify-content-center' style={{ fontFamily: "Montserrat-Regular" }}>
 					<h1 className='text-light'>Welcome to My Website</h1>
 				</Row>
-				<Row className='justify-content-center'>
+				<Row className='justify-content-center' style={{ fontFamily: "Montserrat-Regular" }}>
 					<p className='text-light'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 					</p>

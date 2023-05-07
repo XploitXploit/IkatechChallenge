@@ -24,7 +24,7 @@ const Header: React.FC = () => {
 				</Container>
 			</div>
 			<div
-				className='bg-secondary d-flex align-items-center'
+				className={`bg-secondary d-flex align-items-center ${styles.headerSecondary}`}
 				style={{ paddingTop: "1px", paddingBottom: "1px" }}>
 				<Container fluid>
 					<Row>
@@ -76,9 +76,7 @@ const Header: React.FC = () => {
 									<path d='M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z'></path>
 								</svg>
 							</div>
-							<p
-								className='text-primary mt-2 mb-0'
-								style={{ fontSize: "1.5rem" }}>
+							<p className={`text-primary mt-2 mb-0 ${styles.promoShipping}`}>
 								ENVIOS GRATIS PARA PEDIDOS SUPERIORES A $300.000
 							</p>
 							<div className={`cart-container ${styles.cartContainer}`}>
@@ -117,6 +115,11 @@ const Header: React.FC = () => {
 								href='/Categoria'
 								className={`font-weight-bold mr-3 ${styles.nav_link_custom} ${styles.nav_link_historia}`}>
 								CATEGORIA
+							</Nav.Link>
+							<Nav.Link
+								href='#'
+								className={`font-weight-bold mr-3 ${styles.nav_link_custom} ${styles.nav_link_historia}`}>
+								HISTORIA
 							</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>

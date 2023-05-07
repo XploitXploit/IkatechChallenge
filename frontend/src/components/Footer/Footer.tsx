@@ -7,12 +7,12 @@ import styles from "./Footer.module.css";
 const Footer: React.FC = () => {
 	return (
 		<footer className='mx-auto text-center'>
-			<div className='d-flex align-items-center m-0'>
+			<div className='d-flex align-items-center m-0' style={{ fontFamily: "Montserrat-Regular" }}>
 				<Container
 					fluid
 					style={{ backgroundColor: "#e7e6e2", height: "120px" }}>
 					<Col>
-						<p style={{ fontSize: "36px" }}>@HUSHPUPPIESCO</p>
+						<p style={{ fontSize: "36px", fontFamily: "Montserrat-Regular" }}>@HUSHPUPPIESCO</p>
 						<div className='social-icons px-2'>
 							<FontAwesomeIcon icon={faFacebook} size='2x' className='mx-2' />
 							<FontAwesomeIcon icon={faInstagram} size='2x' />
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
 					</Col>
 				</Container>
 			</div>
-			<div className='second-row'>
+			<div className='second-row d-flex align-items-center m-3' style={{ fontFamily: "Montserrat-Regular" }}>
 				<Container>
 					<Row>
 						<Col xs={12} sm={6} md={3}>

@@ -14,7 +14,7 @@ const images = [
 const InstagramCarrousel: React.FC = () => {
 	return (
 		<div>
-			<h2>
+			<h2 style={{ fontFamily: "Montserrat-Regular" } }>
 				<FontAwesomeIcon icon={faInstagram} /> Instagram - HUSHPUPPIESCO
 			</h2>
 			<div className={styles.imagesContainer}>

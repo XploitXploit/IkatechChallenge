@@ -11,12 +11,15 @@ const Jumbotron: FC = () => {
 		display: "flex",
 		justifyContent: "center",
 		alignItems: "center",
+		fontFamily: "Montserrat-Regular",
 	};
 
 	const buttonStyle: CSSProperties = {
 		position: "absolute",
 		bottom: "2rem",
 		right: "2rem",
+		fontFamily: "Montserrat-Regular",
+		borderRadius: "0",
 	};
 
 	return (
@@ -24,12 +27,12 @@ const Jumbotron: FC = () => {
 			<Container>
 				<Row>
 					<Col>
-						<h1 className='text-light'>Welcome to Our Shoe Store</h1>
+						<h1 className='secondary text-light'>Welcome to Our Shoe Store</h1>
 						<p className='text-light'>
 							Discover the latest styles and trends in shoes for men and women.
 							Explore our collection and find the perfect pair for any occasion.
 						</p>
-						<Button style={buttonStyle} variant='primary'>
+						<Button variant='secondary' style={buttonStyle} >
 							Shop Now
 						</Button>
 					</Col>
