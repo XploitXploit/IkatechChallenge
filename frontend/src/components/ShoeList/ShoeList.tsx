@@ -27,6 +27,7 @@ const ShoeList: React.FC<ShoeListProps> = ({ shoes }) => {
 		if (precioMin && shoe.precio < precioMin) {
 			return false;
 		}
+		
 		return true;
 	});
 	return (

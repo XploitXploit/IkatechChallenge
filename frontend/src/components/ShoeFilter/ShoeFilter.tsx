@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import { Form } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import {
 	setColorFilter,
-	setPriceFilter,
+    setPriceFilter,
+    clearFiltersColor,
+    clearFiltersPrice
 } from "../../redux/slices/filterSlice.tsx";
+import { FaTrash } from "react-icons/fa";
 import styles from "./ShoeFilter.module.css";
 
 const ShoeFilter: React.FC = () => {
@@ -13,7 +16,11 @@ const ShoeFilter: React.FC = () => {
 	const [maxPrice, setMaxPrice] = useState(0);
 
 	const handleColorChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-		dispatch(setColorFilter(e.target.value));
+        if (e.target.value === "all") {
+			dispatch(clearFiltersColor());
+		} else {
+			dispatch(setColorFilter(e.target.value));
+		}
 	};
 
     const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -24,6 +31,12 @@ const ShoeFilter: React.FC = () => {
             setMaxPrice(Number(e.target.value));
             dispatch(setPriceFilter({ minPrice, maxPrice: Number(e.target.value) }));
         }
+    };
+
+    const handleClearFilters = () => {
+        dispatch(clearFiltersPrice());
+        setMinPrice(0);
+        setMaxPrice(0);
     };
 
 	return (
@@ -66,7 +79,10 @@ const ShoeFilter: React.FC = () => {
 							onChange={handlePriceChange}
 							placeholder='Max price'
 							style={{ width: "48%" }}
-						/>
+                        />
+                        <Button variant="link" onClick={handleClearFilters}>
+                            <FaTrash />
+                        </Button>
 					</div>
 				</Form.Group>
 			</Form>

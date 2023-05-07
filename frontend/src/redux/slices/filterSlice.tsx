@@ -23,15 +23,17 @@ const filterSlice = createSlice({
 			state.precioMin = action.payload.minPrice;
 			state.precioMax = action.payload.maxPrice;
 		},
-		clearFilters: (state) => {
+		clearFiltersColor: (state) => {
 			state.color = null;
+        },
+        clearFiltersPrice: (state) => {
 			state.precioMax = null;
 			state.precioMin = null;
 		},
 	},
 });
 
-export const { setColorFilter, setPriceFilter, clearFilters } =
+export const { setColorFilter, setPriceFilter, clearFiltersColor,clearFiltersPrice } =
 	filterSlice.actions;
 
 export default filterSlice.reducer;
