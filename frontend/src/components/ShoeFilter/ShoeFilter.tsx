@@ -60,8 +60,8 @@ const ShoeFilter: React.FC = () => {
 			<Form>
 				<Form.Group controlId='size'>
 					<Form.Label
-						style={{ marginRight: "0.5rem", paddingBottom: "0.5rem" }}>
-						Size
+						style={{ marginRight: "0.5rem", paddingBottom: "0.5rem", fontSize: "2.2rem" }}>
+						Talle
 					</Form.Label>
 					<SizeSelector
 						selectedSize={selectedSize}
@@ -74,7 +74,7 @@ const ShoeFilter: React.FC = () => {
 				</Form.Group>
 				<Form.Group controlId='color'>
 					<Form.Label
-						style={{ marginRight: "0.5rem", paddingBottom: "0.5rem" }}>
+						style={{ marginRight: "0.5rem", paddingBottom: "0.5rem", fontSize: "2.2rem" }}>
 						Color
 					</Form.Label>
 					<Form.Control
@@ -96,8 +96,8 @@ const ShoeFilter: React.FC = () => {
 					</Form.Control>
 				</Form.Group>
 				<Form.Group controlId='price'>
-					<Form.Label style={{ marginRight: "0.5rem", paddingTop: "1rem" }}>
-						Price range
+					<Form.Label style={{ marginRight: "0.5rem", paddingTop: "1rem", fontSize: "2.2rem" }}>
+						Precio
 					</Form.Label>
 					<div className='d-flex justify-content-between py-1'>
 						<Form.Control

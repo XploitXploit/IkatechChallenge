@@ -8,9 +8,9 @@ const ShoePage: React.FC = () => {
 	const shoes = zapatos;
 
 	return (
-		<Container>
+		<Container style={{ marginTop: "3vh", marginBottom: "3vh" }}>
 			<Row>
-                <h2 className='mx-auto text-left p-3'>CALZADO</h2>
+                <h2 className='mx-auto text-left p-3' style={{ fontFamily: 'Nashville', fontSize: '60px' }}>CALZADO</h2>
                 <BreadcrumbComponent />
 			</Row>
 			<Row>

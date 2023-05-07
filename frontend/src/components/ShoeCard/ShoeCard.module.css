@@ -15,9 +15,17 @@
 	border-bottom: 1px solid #ccc;
 	border-radius: 0;
 	cursor: pointer;
+
 }
 
 .cardText {
 	text-align: center;
 	color: primary;
+	font-family: "Monserrat-Regular", sans-serif;
+}
+
+.cardPrice {
+	text-align: center;
+	color: #7A4A58;
+	font-family: "Monserrat-Regular", sans-serif;
 }

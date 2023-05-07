@@ -66,13 +66,10 @@ const ShoeCard: React.FC<ShoeCardProps> = ({
 					/>
 				</Row>
 				<Row>
-				<Card.Body>
-					<Card.Title style={{ textAlign: "center" }}>{nombre}</Card.Title>
-					<Card.Text
-						style={{
-							textAlign: "center",
-							color: "#7A4A58",
-						}}>{`$${precio}`}</Card.Text>
+				<Card.Body >
+					<Card.Title className={styles.cardText}>{nombre}</Card.Title>
+					<Card.Text className={styles.cardPrice}
+					>{`$${precio}`}</Card.Text>
 					{showButton && (
 						<Button
 							style={{ width: "100%", borderRadius: 0 }}

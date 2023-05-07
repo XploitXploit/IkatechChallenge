@@ -53,7 +53,7 @@ const ShoeDetail: React.FC<ShoeDetailProps> = ({ shoe }) => {
 	};
 
 	return (
-		<Container className=' mt-1'>
+		<Container className={`{mt-1 ${styles.fontCustom}`}>
 			<Row className='mb-3 py-3'>
 				<BreadcrumbComponent />
 			</Row>
@@ -133,16 +133,15 @@ const ShoeDetail: React.FC<ShoeDetailProps> = ({ shoe }) => {
 				<hr></hr>
 				<p>{shoe.descripcion}</p>
 			</Row>
-			<Row style={{ textAlign: "left", paddingTop: "70px" }}>
+			<Row style={{ textAlign: "left", paddingTop: "70px", paddingBottom: "70px" }}>
 				<h1>TECNOLOGIAS</h1>
 				<hr></hr>
 				<p>{shoe.descripcion}</p>
 			</Row>
-			<Row>
-				<h4 style={{ textAlign: "left", paddingTop: "70px" }}>
+			<Row >
+				<h4 style={{ textAlign: "left",backgroundColor: "#e7e6e2"}}>
 					COMPLETA TU LOOK
 				</h4>
-				<hr></hr>
 				<ShoeLook showButton={true} />
 			</Row>
 			<Row>

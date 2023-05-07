@@ -6,3 +6,7 @@
 	background-color: #fff;
 	cursor: pointer;
 }
+
+.fontCustom {
+	font-family: "Monserrat-Regular", sans-serif;
+}
