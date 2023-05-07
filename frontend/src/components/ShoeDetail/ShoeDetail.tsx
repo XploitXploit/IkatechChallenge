@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, Image, Button, Container } from "react-bootstrap";
+import { Row, Col, Image, Button, Container, Carousel } from "react-bootstrap";
 import SizeSelector from "../SizeSelector/SizeSelector.tsx";
 import ShoeLook from "./ShoeLook.tsx";
 import BreadcrumbComponent from "../Breadcrumb/Breadcrumb.tsx";
@@ -29,20 +29,29 @@ interface ShoeDetailProps {
 const ShoeDetail: React.FC<ShoeDetailProps> = ({ shoe }) => {
 	const dispatch = useDispatch();
 	const [selectedSize, setSelectedSize] = useState("");
-	const [imagePath, setImagePath] = useState("");
+	const [imagePaths, setImagePaths] = useState<string[]>([]);
+	const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
 	useEffect(() => {
-		const loadImage = async () => {
+		const loadImages = async () => {
 			try {
-				const img = await import(`../../assets/img/shoes/${shoe.foto}`);
-				setImagePath(img.default);
+				const mainImage = await import(`../../assets/img/shoes/${shoe.foto}`);
+				const images = [mainImage.default];
+
+				// Load other thumbnail images
+				for (let i = 1; i <= 4; i++) {
+					const thumbnail = await import(`../../assets/img/shoes/${i}.png`);
+					images.push(thumbnail.default);
+				}
+
+				setImagePaths(images);
 			} catch (error) {
 				console.error("Error loading image", error);
 			}
 		};
 
 		if (shoe.foto) {
-			loadImage();
+			loadImages();
 		}
 	}, [shoe.foto]);
 
@@ -52,6 +61,10 @@ const ShoeDetail: React.FC<ShoeDetailProps> = ({ shoe }) => {
 		dispatch(setSize(sizeAsNumber));
 	};
 
+	const handleImageChange = (selectedIndex: number) => {
+		setSelectedImageIndex(selectedIndex);
+	};
+
 	return (
 		<Container className={`{mt-1 ${styles.fontCustom}`}>
 			<Row className='mb-3 py-3'>
@@ -59,14 +72,21 @@ const ShoeDetail: React.FC<ShoeDetailProps> = ({ shoe }) => {
 			</Row>
 			<Row>
 				<Col md={8}>
-					<Image src={imagePath} alt={shoe.nombre} fluid />
+					<Carousel onSelect={handleImageChange}>
+						{imagePaths.map((path) => (
+							<Carousel.Item key={path}>
+								<Image src={path} alt={shoe.nombre} fluid />
+							</Carousel.Item>
+						))}
+					</Carousel>
 					<hr />
 					<Row>
-						{Array.from({ length: 5 }).map((_, index) => (
+						{imagePaths.map((path, index) => (
 							<Col xs={4} md={2} key={index}>
 								<Image
-									src={imagePath}
+									src={path}
 									alt={`Preview ${index + 1}`}
+									className={selectedImageIndex === index ? styles.selectedThumbnail : ''}
 									fluid
 									thumbnail
 								/>
@@ -92,11 +112,15 @@ const ShoeDetail: React.FC<ShoeDetailProps> = ({ shoe }) => {
 							<p>Code: {shoe.referencia}</p>
 						</Row>
 
-						<Row >
-							{Array.from({ length: 5 }).map((_, index) => (
-								<Col xs={4} md={3} key={index} style={{ paddingLeft: "0px", paddingRight: "0px" }}>
+						<Row>
+							{imagePaths.map((path, index) => (
+								<Col
+									xs={4}
+									md={3}
+									key={index}
+									style={{ paddingLeft: "0px", paddingRight: "0px" }}>
 									<Image
-										src={imagePath}
+										src={path}
 										alt={`Preview ${index + 1}`}
 										className={styles.thumbnailCustom}
 										style={{ marginTop: "5px" }}
@@ -133,13 +157,18 @@ const ShoeDetail: React.FC<ShoeDetailProps> = ({ shoe }) => {
 				<hr></hr>
 				<p>{shoe.descripcion}</p>
 			</Row>
-			<Row style={{ textAlign: "left", paddingTop: "70px", paddingBottom: "70px" }}>
+			<Row
+				style={{
+					textAlign: "left",
+					paddingTop: "70px",
+					paddingBottom: "70px",
+				}}>
 				<h1>TECNOLOGIAS</h1>
 				<hr></hr>
 				<p>{shoe.descripcion}</p>
 			</Row>
-			<Row >
-				<h4 style={{ textAlign: "left",backgroundColor: "#e7e6e2"}}>
+			<Row>
+				<h4 style={{ textAlign: "left", backgroundColor: "#e7e6e2" }}>
 					COMPLETA TU LOOK
 				</h4>
 				<ShoeLook showButton={true} />

@@ -10,3 +10,8 @@
 .fontCustom {
 	font-family: "Monserrat-Regular", sans-serif;
 }
+
+.selectedThumbnail {
+	border: 2px solid #7a4a58;
+}
+
