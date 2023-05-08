@@ -18,7 +18,7 @@ Este challenge esta dividido en dos carpetas, backend y frontend. Cada una con l
 		 - Nginx: permite montar un servidor para servir los estaticos de la pagina
 		 - Docker: facilita la creación de una imagen lista para producción, que contiene el build de nuestros archivos estáticos y el servidor que los sirve.
 
-Para correr el proyecto hay creado un bash run.sh, con correr este archivo deberia poder ingresar al sitio a traves de la url http://localhost:3333/.
+Para correr el proyecto hay creado un bash run.sh, con correr este archivo deberia poder ingresar al sitio a traves de la url http://localhost:3333/. Para correrlo hay que estar dentro de la carpeta frontend
 
  - ## Backend
 Dentro de la carpeta backend encontrara un archivo .docx con la solucion de todos los problemas planteados por el challenge de backend, para una aplicacion tipo uber. A su vez se adjuntan los diagramas utilizados, estos estan en el archivo .docs, pero para mejor vizualizacion estan en formato .png.
