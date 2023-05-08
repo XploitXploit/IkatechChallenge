@@ -43,6 +43,8 @@ Al completar este desafío, aplicar diferentes tecnologías y conceptos de desar
 
 9. Crear el componente carrito y que sea visible desde todas las pantallas.
 
+10. Crear un makefile con los alias necesarios para hacer que la experiencia de desarrollador sea mas placentera.
+
 Desde ya muchas gracias por la oportunida, espero quien lo lea, tenga un buen dia.
 
 Francisco Pellerano Cardús.
